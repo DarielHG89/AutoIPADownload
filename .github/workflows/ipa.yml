@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
     inputs:
       debug_enabled:
-        description: 'Run the build with ngrok debugging enabled'
+        description: 'Run the build with ngrok debugging enabled '
         required: false
         default: false
   repository_dispatch:

@@ -2,9 +2,9 @@
 name: Download IPA
 
 env:
-  appUrl: "https://apps.apple.com/jp/app/id1377018522"
-  appStore: "jp"
-  appName: "allstars"
+  appUrl: "https://apps.apple.com/US/app/id454638411"
+  appStore: "US"
+  appName: "Fmessenger"
   PYTHONIOENCODING: utf-8
 
 on: 

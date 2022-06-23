@@ -3,8 +3,9 @@ from get_version import *
 
 def main(args):
     appId, appVer = getAppInfo(args[1], args[0])
-    if os.path.exists('curVer.txt'):
-        with open('curVer.txt') as f:
+    cverf = appId+'curVer.txt'
+    if os.path.exists(cverf):
+        with open(cverf) as f:
             ver = f.read()
         if ver == appVer:
             return 1

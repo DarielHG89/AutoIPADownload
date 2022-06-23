@@ -1,5 +1,5 @@
 # vim: expandtab tabstop=2 shiftwidth=2
-name: Download IPA
+name: Download IPA Fmessenger
 
 env:
   appUrl: "https://apps.apple.com/US/app/id454638411"

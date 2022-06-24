@@ -1,8 +1,8 @@
 # vim: expandtab tabstop=2 shiftwidth=2
-name: Download IPA Fmessenger
+name: Download IPA
 
 env:
-  appUrl: "https://apps.apple.com/US/app/id454638411"
+  appUrl: "https://apps.apple.com/jp/app/id454638411"
   appStore: "US"
   appName: "Fmessenger"
   PYTHONIOENCODING: utf-8
@@ -14,7 +14,7 @@ on:
   workflow_dispatch:
     inputs:
       debug_enabled:
-        description: 'Run the build with ngrok debugging enabled '
+        description: 'Run the build with ngrok debugging enabled'
         required: false
         default: false
   repository_dispatch:
@@ -88,7 +88,7 @@ jobs:
       - name: Get current version
         if: ${{ steps.check.outputs.NEED_UPDATE == 1 }}
         id: curver
-        run: echo "::set-output name=curver::$(cat 454638411curver.txt)"
+        run: echo "::set-output name=curver::$(cat curver.txt)"
         shell: bash
       #- name: Create tag     
       #  uses: actions/github-script@v3
@@ -122,7 +122,7 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add 454638411curver.txt
+          git add curver.txt
           git commit -m "Updating app to ver ${{ steps.curver.outputs.curver }}" -a
         shell: bash
       - name: Push changes

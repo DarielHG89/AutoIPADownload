@@ -9,8 +9,8 @@ env:
 
 on: 
   push:
-  schedule:
-    - cron: '30 * * * *'
+  #schedule:
+  #  - cron: '30 * * * *'
   workflow_dispatch:
     inputs:
       debug_enabled:
